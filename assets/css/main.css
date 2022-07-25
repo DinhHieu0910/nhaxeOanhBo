@@ -71,6 +71,10 @@ main .banner .logo_wrapper {
 
 main .banner .logo_wrapper-name {
   font-size: 4rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 main .banner .logo_wrapper-phone {

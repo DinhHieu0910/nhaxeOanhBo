@@ -49,6 +49,7 @@ main {
             color: #fff;
             &-name {
                 font-size: 4rem;
+                user-select: none;
             }
             &-phone {
                 font-size: 2.4rem;
