@@ -16,6 +16,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
     <header>
@@ -23,7 +25,7 @@
             <div class="container">
                 <div class="info d-flex align-items-center justify-content-end">
                     <p class="address">Địa chỉ: Số 255, Lê Lợi 3, Thành phố Tuyên Quang, Tuyên Quang</p>
-                    <p class="phone">Tổng đài đặt xe: 0913852000</p>
+                    <p class="phone">Tổng đài đặt xe: 0914852000</p>
                 </div>
             </div>
             
@@ -31,19 +33,418 @@
     </header>
 
     <main>
-        <div class="banner">
-            <div id="particles-js"></div> 
-            <div class="container d-flex flex-column align-items-center justify-content-center logo_wrapper">
-                <h1 class="logo_wrapper-name">Nhà xe Oanh Bồ</h1>
-                <h3 class="logo_wrapper-phone">Hotline: 0913852000</h3>
+        <div class="main index">
+            <div class="marquee_wrapper">
+                <p class="marquee">Sứ mệnh của chúng tôi là mang tới cho khách hàng một dịch vụ xe du lịch hợp đồng
+                    chất lượng nhất, an toàn nhất và tiết kiệm nhất</p>
             </div>
-        </div>
+            <div class="banner">
+                <div id="particles-js"></div> 
+                <div class="container d-flex flex-column align-items-center justify-content-center logo_wrapper">
+                    <h1 class="logo_wrapper-name">Nhà xe Oanh Bồ</h1>
+                    <h3 class="logo_wrapper-phone">Hotline: 0914852000</h3>
+                </div>
+            </div>
+        
+            
 
+            <div class="pop_up_home_brand hidden">
+                <input type="checkbox" name="" id="pop_up_home_brand_input">
+                <label for="pop_up_home_brand_input" class="pop_up_home_brand_overlay"></label>
+                <div class="pop_up_home_brand_wrapper" style="width: 99% !important;">
+                    <div class="container">
+                        <div class="swiper home_brand_swiper">
+                            <div class="swiper-wrapper">
+                                <!-- @for($i = 1; $i <= theme_option('number_of_images_home_brand'); $i++) -->
+                                <div class="swiper-slide">
+                                    <div class="product_detail_box container-fluid">
+                                        <div class="row">
+                                            <label for="pop_up_home_brand_input">
+                                                <img class="Close_detailsProduct" src="{{RvMedia::getImageUrl(theme_option('icon_close_popup'))}}" alt="">
+                                            </label>
+                                            <div class="product_detail_box-img d-flex align-items-center justify-content-center col-lg-6 col-sm-6 col-6">
+                                                <img style="width: unset;" src="{{ RvMedia::getImageUrl(theme_option('brand_image'.$i)) }}" alt="home_brand_detail_img">
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-between col-lg-6 col-sm-6 col-6">
+        
+                                                <div class="home_brand_detail_content">
+        <!-- {{--                                            <div class="title">Vardan</div>--}} -->
+                                                    <div class="title">brand_title</div>
+        <!-- {{--                                            <div class="content">Chúng mình chuyên bán sỉ sáp làm nến thơm: sáp đậu nành, sáp ong, sáp cọ mềm,..nguyên liệu làm nến với giá rẻ nhất HN. Shop cung cấp các loại nến thơm tự nhiên, nến decor, diêm đốt nến các bạn nhé!--}} -->
+                                                    <div class="content">brand_content
+                                                        <br>-------
+        <!-- {{--                                                <br>🍂Vardan - Nến thơm tự nhiên--}} -->
+        <!-- {{--                                                <br>{{ theme_option('brand-content-description-1') }}--}} -->
+        <!-- {{--                                                <br>Add: 109 Sở Thượng, Yên Sở, Hoàng Mai, HN.--}} -->
+        <!-- {{--                                                <br>{{ theme_option('brand-address-1') }}--}} -->
+        <!-- {{--                                                <br>Hotline: 0338416243 (Zalo)--}} -->
+        <!-- {{--                                                <br>{{ theme_option('brand-hotline-1') }}--}} -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- @endfor -->
+                            </div>
+        
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+        
+                        </div>
+                    </div>
+        
+                </div>
+        
+            </div>
+        
+        
+            <div class="home_section_index hide-on-mobile-tablet">
+                <div class="bg-white text-center mh-4">
+                    <h4 class="home_subtitle">KHỞI ĐẦU HÀNH TRÌNH CỦA BẠN</h4>
+                    <div class="container d-flex justify-content-between">
+                        <div class="item col-4">
+                            <div class="item_icon">
+                                <i style="background: var(--primary-color);
+                                color: #fff;
+                                height: 8rem;
+                                line-height: 8rem;
+                                padding: 0 2rem;
+                                font-size: 4rem;
+                                border-radius: 100%;" class='bx bxs-user'></i>
+                            </div>
+                            <h3 class="item_heading">Được khách hàng tin dùng mỗi tháng</h3>
+                            <p class="item_content">Chúng tôi đã và đang cung cấp sự tiện nghi trong di chuyển cho hàng chục ngàn khách hàng trên cả nước.</p>
+                        </div>
+        
+                        <div class="item col-4">
+                            <div class="item_icon">
+                                <i style="background: var(--primary-color);
+                                color: #fff;
+                                height: 8rem;
+                                line-height: 8rem;
+                                padding: 0 2rem;
+                                font-size: 4rem;
+                                border-radius: 100%;" class='bx bxs-bus'></i>
+                            </div>
+                            <h3 class="item_heading">Số lượng xe lớn nhất miền Bắc</h3>
+                            <p class="item_content">Hỗ trợ đón đưa khách hàng về mọi điểm khắp thành phố.</p>
+                        </div>
+                        <div class="item col-4">
+                            <div class="item_icon">
+                                <i style="background: var(--primary-color);
+                                color: #fff;
+                                height: 8rem;
+                                line-height: 8rem;
+                                padding: 0 2rem;
+                                font-size: 4rem;
+                                border-radius: 100%;" class='bx bxs-phone-call'></i>
+                            </div>
+                            <h3 class="item_heading">Hệ thống đặt xe dễ dàng, tiện lợi</h3>
+                            <p class="item_content">Quý hành khách có thể đặt xe trực tiếp qua tổng đài 0914852000, hoặc qua hệ thống đặt xe trực tuyến tốt nhất tại Việt Nam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home_section_index hide-on-desktop">
+                <div class="bg-white text-center mh-4">
+                    <h4 class="home_subtitle">KHỞI ĐẦU HÀNH TRÌNH CỦA BẠN</h4>
+                    <div class="container slideshow home_banner">
+                        <div class="swiper home_banner_swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <div class="item_icon">
+                                            <i style="background: var(--primary-color);
+                                            color: #fff;
+                                            height: 8rem;
+                                            line-height: 8rem;
+                                            padding: 0 2rem;
+                                            font-size: 4rem;
+                                            border-radius: 100%;" class='bx bxs-user'></i>
+                                        </div>
+                                        <h3 class="item_heading">Được khách hàng tin dùng mỗi tháng</h3>
+                                        <p class="item_content">Chúng tôi đã và đang cung cấp sự tiện nghi trong di chuyển cho hàng chục ngàn khách hàng trên cả nước.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <div class="item_icon">
+                                            <i style="background: var(--primary-color);
+                                            color: #fff;
+                                            height: 8rem;
+                                            line-height: 8rem;
+                                            padding: 0 2rem;
+                                            font-size: 4rem;
+                                            border-radius: 100%;" class='bx bxs-bus'></i>
+                                        </div>
+                                        <h3 class="item_heading">Số lượng xe lớn nhất miền Bắc</h3>
+                                        <p class="item_content">Hỗ trợ đón đưa khách hàng về mọi điểm khắp thành phố.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <div class="item_icon">
+                                            <i style="background: var(--primary-color);
+                                            color: #fff;
+                                            height: 8rem;
+                                            line-height: 8rem;
+                                            padding: 0 2rem;
+                                            font-size: 4rem;
+                                            border-radius: 100%;" class='bx bxs-phone-call'></i>
+                                        </div>
+                                        <h3 class="item_heading">Hệ thống đặt xe dễ dàng, tiện lợi</h3>
+                                        <p class="item_content">Quý hành khách có thể đặt xe trực tiếp qua tổng đài 0914852000, hoặc qua hệ thống đặt xe trực tuyến tốt nhất tại Việt Nam.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background-color: #EAF7FF;" class="gallery_banner">
+                <div class="swiper gallery_banner_swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="items">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="./assets/img/front.jpg" alt="" srcset="">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="./assets/img/back.jpg" alt="" srcset="">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="./assets/img/insight2.jpg" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="items">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="./assets/img/front2.jpg" alt="" srcset="">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="./assets/img/back.jpg" alt="" srcset="">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="./assets/img/insight.jpg" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="items">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="./assets/img/front3.jpg" alt="" srcset="">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="./assets/img/back.jpg" alt="" srcset="">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="./assets/img/insight3.jpg" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+        
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        
+            <div class="home_section_index">
+                <div class="bg-white home_showcase">
+                    <h4 class="home_subtitle">SỰ TÍN NHIỆM CỦA ĐỐI TÁC</h4>
+        
+                    <div class="swiper home_brand_thumbs_swiper hide-on-mobile">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="home_wrapper showcase_wrapper row flex-nowrap container">
+                                    <!-- @for($i = 1; $i <= theme_option('number_of_images_home_brand'); $i++) -->
+                                    <label for="pop_up_home_brand_input" class="showcase_wrap">
+                                        <div class="showcase_item showcase_item_round">
+                                            <!-- <img src="{{RvMedia::getImageUrl(theme_option('brand_image'.$i))}}" alt="showcase"> -->
+                                        </div>
+                                        <div class="showcase_item_blur"></div>
+                                    </label>
+                                    <!-- @endfor -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper home_brand_thumbs_swiper_mobile hide-on-desktop hide-on-tablet">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="home_wrapper showcase_wrapper row flex-nowrap container">
+                                    <!-- @for($i = 1; $i <= 3; $i++) -->
+                                        <label for="pop_up_home_brand_input" class="showcase_wrap slide1">
+                                            <div class="showcase_item showcase_item_round">
+                                                <!-- <img src="{{RvMedia::getImageUrl(theme_option('brand_image'.$i))}}" alt="showcase"> -->
+                                            </div>
+                                            <div class="showcase_item_blur"></div>
+                                        </label>
+                                    <!-- @endfor -->
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="home_wrapper showcase_wrapper row flex-nowrap container">
+                                    <!-- @for($i = 4; $i <= 6; $i++) -->
+                                        <label for="pop_up_home_brand_input" class="showcase_wrap slide2">
+                                            <div class="showcase_item showcase_item_round">
+                                                <!-- <img src="{{RvMedia::getImageUrl(theme_option('brand_image'.$i))}}" alt="showcase"> -->
+                                            </div>
+                                            <div class="showcase_item_blur"></div>
+                                        </label>
+                                    <!-- @endfor -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        
+            <div class="home_section_index">
+                <div class="home_showcase bg-white mb-1">
+                    <h4 class="home_subtitle">NIỀM TIN YÊU CỦA KHÁCH HÀNG</h4>
+                    <div class=" showcase_gallery row no-gutters flex-nowrap">
+                        <!-- @for($i = 1; $i <= theme_option('number_of_images_home_insta'); $i++) -->
+                            <a href="{{ theme_option('instagram-link-image'.$i) }}" class="showcase_wrap">
+                                <div class="showcase_item">
+                                    <!-- <img src="{{ RvMedia::getImageUrl(theme_option('instagram_image'.$i)) }}" alt=""> -->
+                                </div>
+                                <div class="showcase_item_blur"></div>
+                            </a>
+                        <!-- @endfor -->
+                    </div>
+                </div>
+            </div>
+        
+            <div class="home_quoteImg d-flex justify-content-center">
+                <!-- <img src="{{ RvMedia::getImageUrl(theme_option('home-quote-image')) }}" alt="Quote Img" srcset=""> -->
+            </div>
+        
+            <div class="container">
+                <div class="homepage_gallery row">
+                    <div class="col-lg-6 col-sm-12 col-xs-12">
+        <!-- {{--                <img src="{{RvMedia::getImageUrl('/teamogift/index-1/home-1.png')}}" alt="" srcset="">--}} -->
+                        <div class="swiper home_banner_swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <!-- <img src="{{ RvMedia::getImageUrl(theme_option('slider_home_gallery'.$i)) }}" alt="" srcset=""> -->
+                                </div>
+                        </div>
+                <div class="swiper-pagination"></div>
+        
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        
+                    </div>
+                    <div class="col-lg-6 col-sm-12 col-xs-12 d-flex flex-column justify-content-between hide-on-mobile">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6 col-xs-6">
+                                <img src="{{ RvMedia::getImageUrl(theme_option('home-sub-gallery-image-1')) }}" alt="" srcset="">
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-xs-6">
+                                <img src="{{ RvMedia::getImageUrl(theme_option('home-sub-gallery-image-2')) }}" alt="" srcset="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6 col-xs-6">
+                                <img src="{{ RvMedia::getImageUrl(theme_option('home-sub-gallery-image-3')) }}" alt="" srcset="">
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-xs-6">
+                                <img src="{{ RvMedia::getImageUrl(theme_option('home-sub-gallery-image-4')) }}" alt="" srcset="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        
     </main>
 
     <footer>
 
+        <div class="container row">
+            <div class="col-lg-5">
+                <!-- @if (theme_option('logo_footer') || theme_option('logo')) -->
+                    <!-- <img src="{{ RvMedia::getImageUrl(theme_option('logo_footer') ? theme_option('logo_footer') : theme_option('logo')) }}" alt="{{ theme_option('site_title') }}" class="footer_logo"/> -->
+    <!-- {{--            <div class="footer_logo"></div>--}} -->
+                <!-- @endif -->
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class='bx bxs-map'></i>
+    <!-- {{--                        <span>33 Lê Văn Thiêm, Nhân Chính, Thanh Xuân, Hà Nội</span>--}} -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class='bx bxs-phone'></i>
+    <!-- {{--                        <span>0986 582 872</span>--}} -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class='bx bxs-envelope'></i>
+    <!-- {{--                        <span>cskh.teamo@gmail.com</span>--}} -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <ul class="footer_linkList">
+                    <li>
+                        <a href="{{ route('public.about') }}">Về chúng tôi</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('public.contact') }}">Hộp thư góp ý</a>
+                    </li>
+                    <li>
+                        <a href="">Tuyển dụng </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('public.corporate') }}">Quà tặng doanh nghiệp</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('post') }}">Blog</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4 footer_text footer_pl">
+                <h3 class="title">LIÊN HỆ</h3>
+                <p>Bạn có thắc mắc chưa được giải quyết ? </p>
+                <p>Chúng tôi online 24/7 từ thứ 2 tới thứ 7</p>
+                <!-- <div class="footer_social">
+    {{--                <i class='bx bxl-facebook'></i>--}}
+                    <a href="{{ theme_option('facebook') }}" class="sc_facebook" target="_blank" style="color: white"><i class="bx bxl-facebook"></i></a>
+    {{--                <i class='bx bxl-instagram'></i>--}}
+                    <a href="{{ theme_option('instagram') }}" class="sc_instagram" target="_blank" style="color: white"><i class="bx bxl-instagram"></i></a>
+    {{--                <i class='bx bxl-tiktok'></i>--}}
+                    <a href="{{ theme_option('tiktok') }}" class="sc_tiktok" target="_blank" style="color: white"><i class="bx bxl-tiktok"></i></a>
+                </div> -->
+            </div>
+            <div class="footer_license col-12">
+                <div class="footer_license-icon"></div>
+                <p>Nhà xe Oanh Bồ</p>
+            </div>
+        </div>
+    
+    
     </footer>
+    
 
     <script src="./assets/js/main.js"></script>
 </body>
